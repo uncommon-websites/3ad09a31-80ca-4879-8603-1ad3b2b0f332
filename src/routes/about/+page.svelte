@@ -26,6 +26,7 @@
 </script>
 
 <SecondaryHero
+	generating
 	title="Solving world hunger"
 	subtitle="one step at a time"
 	imageSrc="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
@@ -33,6 +34,7 @@
 
 <!-- Story Section -->
 <Story
+	generating
 	paragraphs={[
 		"We started in 2018 with a simple goal: make helpful tech that people actually need. While many chase profits, we chose to do things differently.",
 		"Beyond making good products, we care about doing the right thing, being kind to our planet, and making sure everyone can use what we build. That's our compass.",
@@ -42,10 +44,11 @@
 />
 
 <!-- Our Culture Section -->
-<Culture {values} />
+<Culture {values} generating />
 
 <!-- StakeholderGrid Section -->
 <StakeholderGrid
+	generating
 	stakeholderType="team"
 	title="Our team."
 	subtitle="Your partners in innovation."
@@ -75,6 +78,7 @@
 />
 
 <StakeholderGrid
+	generating
 	stakeholderType="investor"
 	title="Backed by the best."
 	subtitle="Point Nine, TSIC and others"
@@ -96,6 +100,7 @@
 
 <!-- CTA Section -->
 <CallToAction
+	generating
 	title="Ready to collaborate?"
 	subtitle="Let's create something amazing"
 	description="Join the companies already leveraging our expertise to transform their digital presence and achieve their business goals."

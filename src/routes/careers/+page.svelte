@@ -191,13 +191,14 @@
 <!-- Hero Section -->
 
 <SecondaryHero
+	generating
 	title="Join our team of innovators"
 	subtitle="We're looking for passionate people to help us build the future of digital experiences. Discover your next opportunity with us."
 	imageSrc="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
 />
 
 <!-- Why Join Us Section -->
-<section class={SECTION_BASE_CLASSES}>
+<section class={SECTION_BASE_CLASSES} generating>
 	<SectionHeader title="Why join us?" subtitle="Build your career while making an impact" />
 
 	<div class="mt-16 grid gap-4 md:grid-cols-3">
@@ -208,12 +209,12 @@
 </section>
 
 <!-- Culture Section -->
-<Culture {values} />
+<Culture {values} generating />
 
-<Testimonials testimonials={employeeTestimonials} />
+<Testimonials testimonials={employeeTestimonials} generating />
 
 <!-- Application Process -->
-<section class={SECTION_BASE_CLASSES}>
+<section class={SECTION_BASE_CLASSES} generating>
 	<div class="mx-auto">
 		<h2 class="text-title1 mb-16">Our application process</h2>
 
@@ -231,7 +232,7 @@
 	</div>
 </section>
 <!-- Current Openings Section -->
-<section class={GRADIENT_BG_CLASSES}>
+<section class={GRADIENT_BG_CLASSES} generating>
 	<div class="section-px section-py container mx-auto grid w-full items-start lg:grid-cols-2">
 		<SectionHeader title="Current openings" subtitle="Find your perfect role" />
 

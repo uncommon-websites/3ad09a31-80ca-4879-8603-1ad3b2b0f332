@@ -1,6 +1,5 @@
 <script lang="ts">
 	// Components
-	import UseCases from "$lib/components/layout/UseCases.svelte";
 	import Summary from "$lib/components/layout/Summary.svelte";
 	import Features from "$lib/components/layout/Features.svelte";
 	import Testimonials from "$lib/components/layout/Testimonials.svelte";
@@ -105,6 +104,7 @@
 		}
 	]}
 />
+<<<<<<< HEAD
 
 <UseCases
 	title="Use Cases"
@@ -142,3 +142,7 @@
 
 <AboutTeaser />
 <CallToAction />
+=======
+<AboutTeaser generating />
+<CallToAction generating />
+>>>>>>> 595092da4961de4e3dbd33e753b9ae46b8431841
