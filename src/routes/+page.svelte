@@ -12,7 +12,7 @@
 <Hero
 	title="From idea to product. Fast."
 	subtitle="We help early-stage teams design, build, and ship real products in days—not months."
-	imageSrc="/generated/image-a-clean-minimal-workspace-featuring-a-la.webp"
+	imageSrc="/generated/image-a-workspace-bathed-in-natural-light-show.webp"
 	callsToAction={[
 		{
 			href: "/contact",
