@@ -20,10 +20,42 @@
 	let wrapperRef: HTMLElement;
 	let carouselRef: HTMLElement;
 	let maxScrollDistance = $state(0);
+	let isTransitioning = $state(false);
+	let autoPlayInterval: number | null = null;
+	let isPaused = $state(false);
 
 	import { onMount } from "svelte";
 
 	onMount(() => {
+		// Keyboard navigation
+		const handleKeydown = (event: KeyboardEvent) => {
+			if (isTransitioning) return;
+			
+			switch (event.key) {
+				case 'ArrowLeft':
+					event.preventDefault();
+					prevSlide();
+					break;
+				case 'ArrowRight':
+					event.preventDefault();
+					nextSlide();
+					break;
+				case 'Home':
+					event.preventDefault();
+					goToSlide(0);
+					break;
+				case 'End':
+					event.preventDefault();
+					goToSlide(testimonials.length - 1);
+					break;
+			}
+		};
+
+		window.addEventListener('keydown', handleKeydown);
+
+		// Start auto-play
+		startAutoPlay();
+
 		// Preload images
 		testimonials.forEach((testimonial) => {
 			const imageSrc = testimonial.image || testimonial.imageSrc;
@@ -123,19 +155,77 @@
 		return () => {
 			window.removeEventListener("resize", handleResize);
 			window.removeEventListener("scroll", handleScroll);
+			window.removeEventListener('keydown', handleKeydown);
+			stopAutoPlay();
 			clearTimeout(resizeTimer);
 		};
 	});
+
+	// Navigation functions
+	function goToSlide(index: number) {
+		if (isTransitioning || index === current) return;
+		
+		isTransitioning = true;
+		current = index;
+		scrollProgress = index / (testimonials.length - 1);
+		
+		// Reset transition flag after animation
+		setTimeout(() => {
+			isTransitioning = false;
+		}, 300);
+	}
+
+	function nextSlide() {
+		const nextIndex = current < testimonials.length - 1 ? current + 1 : 0;
+		goToSlide(nextIndex);
+	}
+
+	function prevSlide() {
+		const prevIndex = current > 0 ? current - 1 : testimonials.length - 1;
+		goToSlide(prevIndex);
+	}
+
+	// Auto-play functionality
+	function startAutoPlay() {
+		if (autoPlayInterval) clearInterval(autoPlayInterval);
+		autoPlayInterval = setInterval(() => {
+			if (!isPaused && !isTransitioning) {
+				nextSlide();
+			}
+		}, 5000); // 5 seconds
+	}
+
+	function stopAutoPlay() {
+		if (autoPlayInterval) {
+			clearInterval(autoPlayInterval);
+			autoPlayInterval = null;
+		}
+	}
+
+	function pauseAutoPlay() {
+		isPaused = true;
+	}
+
+	function resumeAutoPlay() {
+		isPaused = false;
+	}
 </script>
 
 <section
 	bind:this={wrapperRef}
 	class="text-pretty [--gap:--spacing(4)]"
 	style="height: calc(100vh * {testimonials.length});"
+	role="region"
+	aria-label="Customer testimonials carousel"
+	aria-live="polite"
 	{...rest}
 >
 	<div
 		class="section-py section-px sticky top-0 flex min-h-screen w-full items-center overflow-hidden"
+		onmouseenter={pauseAutoPlay}
+		onmouseleave={resumeAutoPlay}
+		onfocusin={pauseAutoPlay}
+		onfocusout={resumeAutoPlay}
 	>
 		<div
 			bind:this={carouselRef}
@@ -143,17 +233,22 @@
 				"flex w-full gap-(--card-gap) pr-8 [--card-gap:--spacing(6)]",
 				"[--inner-radius:calc(var(--outer-radius)-var(--gap))] [--outer-radius:var(--radius)] lg:[--outer-radius:var(--radius-xl)]"
 			]}
+			role="group"
+			aria-label="Testimonials"
 		>
-			{#each testimonials as testimonial}
+			{#each testimonials as testimonial, index}
 				<article
+					role="tabpanel"
+					aria-label="Testimonial {index + 1} of {testimonials.length}"
 					class={[
 						"lg:container-xs  lg:min-w-[50%] lg:grid-cols-[2fr_3fr]",
 						"items-between grid grid-cols-1 gap-8",
 						"bg-card dark:text-white",
 						"aspect-video max-w-full min-w-full xl:aspect-[auto]",
-						"transform-gpu transition-transform duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform",
+						"transform-gpu will-change-transform",
 						"rounded-(--outer-radius) p-(--gap)",
-						"border-border border contain-layout"
+						"border-border border contain-layout",
+						isTransitioning ? "transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" : "transition-transform duration-200 ease-[cubic-bezier(0.16,1,0.3,1)]"
 					]}
 					style:transform="translateX(calc(-{scrollProgress} * {maxScrollDistance}px))"
 				>
@@ -192,16 +287,59 @@
 			<div class="min-w-(--gap) lg:min-w-[calc(var(--gap)*3)]"></div>
 		</div>
 
+		<!-- Navigation Controls -->
+		<div class="absolute inset-y-0 left-4 flex items-center">
+			<button
+				onclick={prevSlide}
+				class={[
+					"bg-card hover:bg-card-hover border-border",
+					"size-12 rounded-full border transition-all duration-200",
+					"flex items-center justify-center",
+					"focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2",
+					"disabled:opacity-50 disabled:cursor-not-allowed"
+				]}
+				disabled={isTransitioning}
+				aria-label="Previous testimonial"
+			>
+				<svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+				</svg>
+			</button>
+		</div>
+
+		<div class="absolute inset-y-0 right-4 flex items-center">
+			<button
+				onclick={nextSlide}
+				class={[
+					"bg-card hover:bg-card-hover border-border",
+					"size-12 rounded-full border transition-all duration-200",
+					"flex items-center justify-center",
+					"focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2",
+					"disabled:opacity-50 disabled:cursor-not-allowed"
+				]}
+				disabled={isTransitioning}
+				aria-label="Next testimonial"
+			>
+				<svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+				</svg>
+			</button>
+		</div>
+
 		<!-- Pagination Indicators -->
 		<div class="absolute bottom-8 left-1/2 flex -translate-x-1/2 justify-center gap-2">
 			{#each testimonials as _, index}
-				<div
-					class="focus:ring-primary-500 bg-emphasis-dim size-1.5 rounded-full transition-all duration-300 ease-in-out dark:bg-gray-700"
-					class:opacity-50={current !== index}
-					class:w-8={current === index}
-					class:dark:bg-gray-400={current === index}
-					aria-hidden="true"
-				></div>
+				<button
+					onclick={() => goToSlide(index)}
+					class={[
+						"bg-emphasis-dim size-1.5 rounded-full transition-all duration-300 ease-in-out",
+						"focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2",
+						"hover:opacity-80",
+						current === index ? "w-8 opacity-100" : "opacity-50"
+					]}
+					disabled={isTransitioning}
+					aria-label="Go to testimonial {index + 1}"
+				></button>
 			{/each}
 		</div>
 	</div>
