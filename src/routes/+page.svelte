@@ -104,45 +104,5 @@
 		}
 	]}
 />
-<<<<<<< HEAD
-
-<UseCases
-	title="Use Cases"
-	subtitle="Real-world applications for rapid product development"
-	useCases={[
-		{
-			title: "From concept to prototype",
-			description: "Transform your initial idea into a working prototype in days. Skip months of planning and get straight to testing with real users to validate your concept.",
-			image: "/generated/image-a-group-of-startup-entrepreneurs-engaged.webp",
-			link: {
-				href: "/use-cases/concept-to-prototype",
-				label: "Learn more"
-			}
-		},
-		{
-			title: "Accelerate market entry",
-			description: "Beat competitors to market with rapid product development. Launch your product while others are still in the planning phase and capture first-mover advantage.",
-			image: "/generated/image-a-product-team-in-an-office-environment-.webp",
-			link: {
-				href: "/use-cases/accelerate-market-entry",
-				label: "Learn more"
-			}
-		},
-		{
-			title: "Build and iterate quickly",
-			description: "Ship your first version fast, then improve based on real user feedback. Our rapid development cycles let you evolve your product at market speed.",
-			image: "/generated/image-developers-in-a-collaborative-workspace-.webp",
-			link: {
-				href: "/use-cases/build-and-iterate-quickly",
-				label: "Learn more"
-			}
-		}
-	]}
-/>
-
 <AboutTeaser />
 <CallToAction />
-=======
-<AboutTeaser generating />
-<CallToAction generating />
->>>>>>> 595092da4961de4e3dbd33e753b9ae46b8431841

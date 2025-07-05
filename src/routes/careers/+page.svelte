@@ -214,7 +214,7 @@
 <Testimonials testimonials={employeeTestimonials} generating />
 
 <!-- Application Process -->
-<section class={SECTION_BASE_CLASSES} generating>
+<section class={SECTION_BASE_CLASSES}>
 	<div class="mx-auto">
 		<h2 class="text-title1 mb-16">Our application process</h2>
 
@@ -232,7 +232,7 @@
 	</div>
 </section>
 <!-- Current Openings Section -->
-<section class={GRADIENT_BG_CLASSES} generating>
+<section class={GRADIENT_BG_CLASSES}>
 	<div class="section-px section-py container mx-auto grid w-full items-start lg:grid-cols-2">
 		<SectionHeader title="Current openings" subtitle="Find your perfect role" />
 
