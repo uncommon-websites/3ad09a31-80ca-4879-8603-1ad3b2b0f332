@@ -1,5 +1,6 @@
-# Task: Change Hero Image to Something Minimal
+# Task: Change Hero Image and Update Brand Variables
 
-- [x] Generate new minimal image for hero section (16:9 aspect ratio)
-- [x] Update Hero component imageSrc prop with new minimal image
-- [x] Final design system compliance check - verified design system classes prioritized over Tailwind, NO shadows, NO custom CSS, NO arbitrary values. Checked theme.css, app.css and typography.css - all using proper design system variables and classes.
+- [ ] Generate new minimal and light hero image (16:9 aspect ratio)
+- [ ] Update brand variables using dedicated tool
+- [ ] Update hero component to use new image
+- [ ] Final design system compliance check - verify design system classes prioritized over Tailwind, NO shadows, NO custom CSS, NO arbitrary values, check theme.css, app.css and typography.css
