@@ -32,6 +32,14 @@
 	// Components
 	import AnimateText from "$lib/components/animation/AnimateText.svelte";
 	import Button from "$lib/components/ui/Button.svelte";
+	import Card from "$lib/components/ui/Card.svelte";
+
+	// Icons
+	import IconZap from "~icons/lucide/zap";
+	import IconTarget from "~icons/lucide/target";
+	import IconRocket from "~icons/lucide/rocket";
+	import IconShield from "~icons/lucide/shield";
+	import IconClock from "~icons/lucide/clock";
 
 	// Constants
 	import { cta } from "$lib/navigation";
@@ -122,4 +130,40 @@
 			/>
 		</div>
 	{/if}
+
+	<!-- Hero Cards Section -->
+	<div class="section-px container mx-auto py-16" data-enter-container>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6" data-enter>
+			<Card
+				title="Lightning fast"
+				description="Ship products in days, not months"
+				icon={IconZap}
+				iconClass="size-5 text-primary"
+			/>
+			<Card
+				title="MVP focused"
+				description="Perfect for early-stage validation"
+				icon={IconTarget}
+				iconClass="size-5 text-primary"
+			/>
+			<Card
+				title="Launch ready"
+				description="From design to deployment"
+				icon={IconRocket}
+				iconClass="size-5 text-primary"
+			/>
+			<Card
+				title="Quality assured"
+				description="Rigorous standards maintained"
+				icon={IconShield}
+				iconClass="size-5 text-primary"
+			/>
+			<Card
+				title="7-day guarantee"
+				description="Live progress tracking included"
+				icon={IconClock}
+				iconClass="size-5 text-primary"
+			/>
+		</div>
+	</div>
 </div>
