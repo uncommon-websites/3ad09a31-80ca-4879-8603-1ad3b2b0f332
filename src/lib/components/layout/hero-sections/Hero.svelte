@@ -120,18 +120,7 @@
 		{/if}
 	</header>
 
-	{#if imageSrc}
-		<div class="col-span-full aspect-video" data-enter>
-			<img
-				src={imageSrc}
-				alt="Customer"
-				class="size-full object-cover"
-				onerror={handleImageError}
-			/>
-		</div>
-	{/if}
-
-	<!-- Hero Cards Section -->
+	<!-- Hero Cards Section - Replacing the single image -->
 	<div class="section-px container mx-auto py-16" data-enter-container>
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6" data-enter>
 			<Card
