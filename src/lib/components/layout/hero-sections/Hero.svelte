@@ -29,6 +29,9 @@
 -->
 
 <script lang="ts">
+	// Svelte
+	import { onMount } from "svelte";
+
 	// Components
 	import AnimateText from "$lib/components/animation/AnimateText.svelte";
 	import Button from "$lib/components/ui/Button.svelte";
@@ -69,6 +72,19 @@
 		centered = false,
 		...rest
 	}: Props = $props();
+
+	// Animation state
+	let cardsVisible = $state(Array(5).fill(false));
+
+	// Trigger card animations on mount
+	onMount(() => {
+		// Stagger the card animations with 150ms delay between each
+		cardsVisible.forEach((_, index) => {
+			setTimeout(() => {
+				cardsVisible[index] = true;
+			}, index * 150);
+		});
+	});
 </script>
 
 <div class="bg-background" {...rest}>
@@ -123,36 +139,61 @@
 	<!-- Hero Cards Section - Replacing the single image -->
 	<div class="section-px container mx-auto py-16" data-enter-container>
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6" data-enter>
-			<Card
-				title="Lightning fast"
-				description="Ship products in days, not months"
-				icon={IconZap}
-				iconClass="size-5 text-primary"
-			/>
-			<Card
-				title="MVP focused"
-				description="Perfect for early-stage validation"
-				icon={IconTarget}
-				iconClass="size-5 text-primary"
-			/>
-			<Card
-				title="Launch ready"
-				description="From design to deployment"
-				icon={IconRocket}
-				iconClass="size-5 text-primary"
-			/>
-			<Card
-				title="Quality assured"
-				description="Rigorous standards maintained"
-				icon={IconShield}
-				iconClass="size-5 text-primary"
-			/>
-			<Card
-				title="7-day guarantee"
-				description="Live progress tracking included"
-				icon={IconClock}
-				iconClass="size-5 text-primary"
-			/>
+			<div class={[
+				"transition-all duration-700 ease-out",
+				cardsVisible[0] ? "opacity-100 blur-none" : "opacity-0 blur-sm"
+			]}>
+				<Card
+					title="Lightning fast"
+					description="Ship products in days, not months"
+					icon={IconZap}
+					iconClass="size-5 text-primary"
+				/>
+			</div>
+			<div class={[
+				"transition-all duration-700 ease-out",
+				cardsVisible[1] ? "opacity-100 blur-none" : "opacity-0 blur-sm"
+			]}>
+				<Card
+					title="MVP focused"
+					description="Perfect for early-stage validation"
+					icon={IconTarget}
+					iconClass="size-5 text-primary"
+				/>
+			</div>
+			<div class={[
+				"transition-all duration-700 ease-out",
+				cardsVisible[2] ? "opacity-100 blur-none" : "opacity-0 blur-sm"
+			]}>
+				<Card
+					title="Launch ready"
+					description="From design to deployment"
+					icon={IconRocket}
+					iconClass="size-5 text-primary"
+				/>
+			</div>
+			<div class={[
+				"transition-all duration-700 ease-out",
+				cardsVisible[3] ? "opacity-100 blur-none" : "opacity-0 blur-sm"
+			]}>
+				<Card
+					title="Quality assured"
+					description="Rigorous standards maintained"
+					icon={IconShield}
+					iconClass="size-5 text-primary"
+				/>
+			</div>
+			<div class={[
+				"transition-all duration-700 ease-out",
+				cardsVisible[4] ? "opacity-100 blur-none" : "opacity-0 blur-sm"
+			]}>
+				<Card
+					title="7-day guarantee"
+					description="Live progress tracking included"
+					icon={IconClock}
+					iconClass="size-5 text-primary"
+				/>
+			</div>
 		</div>
 	</div>
 </div>
