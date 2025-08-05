@@ -23,7 +23,7 @@
 </script>
 
 <article
-	class="bg-card hover:bg-sidebar-primary-foreground hover:text-primary-900 border-border flex flex-col rounded-(--radius) border p-4 px-5 text-pretty transition duration-300 ease-out lg:p-5 lg:px-6 aspect-[9/16] min-h-[400px] {customClass}"
+	class="bg-card hover:bg-sidebar-primary-foreground hover:text-primary-900 border-border flex flex-col rounded-(--radius) border p-4 px-5 text-pretty transition-all duration-300 ease-out lg:p-5 lg:px-6 aspect-[9/16] min-h-[400px] hover:-translate-y-2 hover:shadow-lg {customClass}"
 >
 	{#if icon || imageSrc}
 		<div class="mb-16">
