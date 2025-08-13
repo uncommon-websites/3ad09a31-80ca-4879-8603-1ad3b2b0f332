@@ -54,7 +54,7 @@
 		subtitle = "Join now",
 		description = "Ready to experience the difference? Join our community of satisfied customers and see how our solution can transform your workflow. ",
 		imageSrc = "/generated/image-a-professional-woman-captured-mid-motion.webp",
-		callsToAction = [cta],
+		callsToAction = cta ? [cta] : [],
 		...rest
 	}: {
 		title?: string;

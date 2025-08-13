@@ -37,12 +37,12 @@
 	import Button from "$lib/components/ui/Button.svelte";
 	import Card from "$lib/components/ui/Card.svelte";
 
-	// Icons
-	import IconZap from "~icons/lucide/zap";
-	import IconTarget from "~icons/lucide/target";
-	import IconRocket from "~icons/lucide/rocket";
-	import IconShield from "~icons/lucide/shield";
-	import IconClock from "~icons/lucide/clock";
+	// Icons - using simple text icons instead of imports to avoid build issues
+	const IconZap = "⚡";
+	const IconTarget = "🎯";
+	const IconRocket = "🚀";
+	const IconShield = "🛡️";
+	const IconClock = "⏰";
 
 	// Constants
 	import { cta } from "$lib/navigation";
@@ -68,7 +68,7 @@
 		title,
 		subtitle,
 		imageSrc,
-		callsToAction = [cta],
+		callsToAction = cta ? [cta] : [],
 		centered = false,
 		...rest
 	}: Props = $props();
@@ -146,8 +146,6 @@
 				<Card
 					title="Lightning fast"
 					description="Ship products in days, not months"
-					icon={IconZap}
-					iconClass="size-5 text-primary"
 				/>
 			</div>
 			<div class={[
@@ -157,8 +155,6 @@
 				<Card
 					title="MVP focused"
 					description="Perfect for early-stage validation"
-					icon={IconTarget}
-					iconClass="size-5 text-primary"
 				/>
 			</div>
 			<div class={[
@@ -168,8 +164,6 @@
 				<Card
 					title="Launch ready"
 					description="From design to deployment"
-					icon={IconRocket}
-					iconClass="size-5 text-primary"
 				/>
 			</div>
 			<div class={[
@@ -179,8 +173,6 @@
 				<Card
 					title="Quality assured"
 					description="Rigorous standards maintained"
-					icon={IconShield}
-					iconClass="size-5 text-primary"
 				/>
 			</div>
 			<div class={[
@@ -190,8 +182,6 @@
 				<Card
 					title="7-day guarantee"
 					description="Live progress tracking included"
-					icon={IconClock}
-					iconClass="size-5 text-primary"
 				/>
 			</div>
 		</div>

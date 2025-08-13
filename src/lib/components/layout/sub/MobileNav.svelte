@@ -111,15 +111,19 @@
 		{/each}
 	</ul>
 
-	<div class="section-px section-pb container mx-auto w-full">
-		<Button size="lg" variant="primary" class="z-0 w-full md:w-auto" href={cta.href}
-			>{cta.label}</Button
-		>
-	</div>
+	{#if cta}
+		<div class="section-px section-pb container mx-auto w-full">
+			<Button size="lg" variant="primary" class="z-0 w-full md:w-auto" href={cta.href}
+				>{cta.label}</Button
+			>
+		</div>
+	{/if}
 </div>
 
 <div class="flex items-center justify-end gap-2">
-	<Button size="sm" variant="secondary" href={cta.href}>{cta.label}</Button>
+	{#if cta}
+		<Button size="sm" variant="secondary" href={cta.href}>{cta.label}</Button>
+	{/if}
 
 	<Button
 		aria-label="Toggle nav"

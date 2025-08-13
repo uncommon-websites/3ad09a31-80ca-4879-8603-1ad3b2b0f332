@@ -28,7 +28,7 @@ Takes up the full viewport height and centers content vertically.
 	let {
 		title,
 		subtitle,
-		callsToAction = [cta],
+		callsToAction = cta ? [cta] : [],
 		imageSrc = "/sample.png",
 		...rest
 	}: Props = $props();

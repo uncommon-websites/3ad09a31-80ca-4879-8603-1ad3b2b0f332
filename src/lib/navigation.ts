@@ -48,49 +48,31 @@ export type NavItem = {
 	})[];
 };
 
-export const cta = {
-	label: "Book demo",
-	href: "/"
-};
+export type CTA = {
+	label: string;
+	href: string;
+} | null;
+
+export const cta: CTA = null;
 
 export const navigation: NavItem[] = [
 	{
-		label: "Pricing",
-		href: "/pricing",
-		showInNav: true,
-		showInFooter: false
-	},
-
-	{
-		label: "Company",
-		showInNav: true,
+		label: "More",
+		showInNav: false,
 		showInFooter: true,
 		children: [
 			{
 				label: "About us",
 				href: "/about",
-				showInNav: true,
-				showInFooter: true
-			},
-			{
-				label: "Pricing",
-				href: "/pricing",
 				showInNav: false,
 				showInFooter: true
 			},
 			{
 				label: "Careers",
 				href: "/careers",
-				showInNav: true,
+				showInNav: false,
 				showInFooter: true
-			}
-		]
-	},
-	{
-		label: "More",
-		showInNav: false,
-		showInFooter: true,
-		children: [
+			},
 			{
 				label: "Privacy",
 				href: "/legal/privacy",

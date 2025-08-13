@@ -52,7 +52,7 @@
 		}>; // A maximum of two calls to action, with the first one being primary and the second one being secondary
 	};
 
-	let { title, subtitle, imageSrc, callsToAction = [cta] }: Props = $props();
+	let { title, subtitle, imageSrc, callsToAction = cta ? [cta] : [] }: Props = $props();
 </script>
 
 <div class="w-full bg-[var(--color-bg-secondary)]">

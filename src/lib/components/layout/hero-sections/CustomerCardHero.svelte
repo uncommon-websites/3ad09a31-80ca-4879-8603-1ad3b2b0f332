@@ -41,7 +41,7 @@ It should ALWAYS have between 3 and 5 customers!
 		title,
 		subtitle,
 		customers = [],
-		callsToAction = [cta],
+		callsToAction = cta ? [cta] : [],
 		centered = false,
 		...rest
 	}: Props = $props();
