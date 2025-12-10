@@ -2,8 +2,8 @@
   <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16">
     <!-- Column 1 -->
     <div>
-      <h3 class="text-2xl font-medium mb-3">Manage projects end-to-end</h3>
-      <p class="text-gray-400 mb-8">Consolidate specs, milestones, tasks, and other documentation in one centralized location.</p>
+      <h3 class="text-2xl font-medium mb-3">Complete project visibility</h3>
+      <p class="text-gray-400 mb-8">Track every milestone, feature, and deliverable in real-time with transparent progress dashboards.</p>
       
       <div class="bg-[#0e1012] border border-white/10 rounded-xl p-6 h-[350px] relative overflow-hidden">
         <div class="space-y-4">
@@ -69,19 +69,19 @@
 
     <!-- Column 2 -->
     <div>
-      <h3 class="text-2xl font-medium mb-3">Project updates</h3>
-      <p class="text-gray-400 mb-8">Communicate progress and project health with built-in project updates.</p>
+      <h3 class="text-2xl font-medium mb-3">Daily progress updates</h3>
+      <p class="text-gray-400 mb-8">Stay informed with automated daily updates on your MVP's development status and next steps.</p>
       
       <div class="bg-[#0e1012] border border-white/10 rounded-xl p-6 h-[350px] relative overflow-hidden flex items-center justify-center">
         <!-- Project Update Card Mockup -->
         <div class="bg-[#1a1c1e] border border-white/10 rounded-lg p-5 w-full max-w-sm shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
             <div class="flex items-center gap-3 mb-4">
-                <div class="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center text-green-500">
+                <div class="w-8 h-8 rounded-full bg-primary-500/20 flex items-center justify-center text-primary-500">
                     <svg viewBox="0 0 24 24" class="w-4 h-4 fill-current"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                 </div>
                 <div>
                     <div class="text-sm font-medium text-white">On Track</div>
-                    <div class="text-xs text-gray-500">We are ready to launch next Thursday</div>
+                    <div class="text-xs text-gray-500">Day 5 of 7 - Ready for final review</div>
                 </div>
             </div>
             <div class="h-20 bg-gradient-to-b from-white/5 to-transparent rounded border border-white/5 mb-3"></div>

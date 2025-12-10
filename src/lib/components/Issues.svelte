@@ -1,14 +1,14 @@
 <section class="py-24 overflow-hidden">
   <div class="max-w-[1200px] mx-auto px-6 mb-16">
-    <div class="flex items-center gap-2 text-yellow-500 mb-4 text-sm font-medium">
+    <div class="flex items-center gap-2 text-primary-500 mb-4 text-sm font-medium">
         <svg viewBox="0 0 16 16" class="w-4 h-4 fill-current">
             <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
         </svg>
-        Task tracking and sprint planning
+        Transparent development process
     </div>
-    <h2 class="text-4xl md:text-5xl font-medium mb-6">Issue tracking<br />you'll enjoy using</h2>
+    <h2 class="text-4xl md:text-5xl font-medium mb-6">Real-time progress<br />tracking dashboard</h2>
     <p class="text-xl text-gray-400 max-w-2xl">
-      <strong class="text-white">Optimized for speed and efficiency.</strong> Create tasks in seconds, discuss issues in context, and breeze through your work in views tailored to you and your team.
+      <strong class="text-white">See exactly where your project stands.</strong> Track every feature, milestone, and deliverable with live updates. No surprises, just transparent progress.
     </p>
   </div>
 

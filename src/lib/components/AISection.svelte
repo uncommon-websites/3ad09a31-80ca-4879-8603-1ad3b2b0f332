@@ -1,87 +1,114 @@
 <section class="py-24 border-t border-white/5">
   <div class="max-w-[1200px] mx-auto px-6">
     <div class="mb-16">
-      <div class="flex items-center gap-2 text-purple-400 mb-4 text-sm font-medium">
+      <div class="flex items-center gap-2 text-primary-400 mb-4 text-sm font-medium">
         <svg viewBox="0 0 16 16" class="w-4 h-4 fill-current">
             <path d="M8 1a1 1 0 0 1 1 1v2.586l1.707-1.707a1 1 0 0 1 1.414 1.414L10.414 6H13a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2.586l1.707 1.707a1 1 0 0 1-1.414 1.414L9 10.414V13a1 1 0 0 1-2 0v-2.586l-1.707 1.707a1 1 0 0 1-1.414-1.414L5.586 9H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h2.586L3.879 3.293a1 1 0 0 1 1.414-1.414L7 3.586V2a1 1 0 0 1 1-1z"/>
         </svg>
-        Artificial Intelligence
+        Rapid Prototyping Process
       </div>
-      <h2 class="text-4xl md:text-5xl font-medium mb-6">AI-assisted product development</h2>
+      <h2 class="text-4xl md:text-5xl font-medium mb-6">Design to deployment in days</h2>
       <p class="text-xl text-gray-400 max-w-2xl">
-        <strong class="text-white">Linear for Agents.</strong> Choose from a variety of AI agents and start delegating work, from code generation to other technical tasks.
+        <strong class="text-white">Streamlined workflows eliminate bottlenecks.</strong> Our specialized process compresses traditional 3-6 month development cycles into 7-day sprints, getting your MVP to market faster.
       </p>
       <div class="mt-8">
         <button class="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors border border-white/5">
-            Learn more >
+            See how it works >
         </button>
       </div>
     </div>
 
-    <!-- AI Interface Mockup -->
+    <!-- Process Timeline Mockup -->
     <div class="relative bg-[#0e1012] border border-white/10 rounded-xl overflow-hidden shadow-2xl mb-24">
         <div class="p-8 md:p-12 min-h-[400px] flex flex-col items-center justify-center">
-            <!-- Mockup of the Agent Selector -->
-            <div class="w-full max-w-lg bg-[#1a1c1e] rounded-lg border border-white/10 shadow-2xl overflow-hidden">
-                <div class="p-3 border-b border-white/5 flex items-center gap-2">
-                    <div class="w-3 h-3 rounded-full bg-white/20"></div>
-                    <span class="text-sm text-gray-400">Assign to...</span>
+            <!-- 7-Day Timeline -->
+            <div class="w-full max-w-3xl">
+                <div class="flex items-center justify-between mb-8">
+                    <span class="text-sm text-gray-500">Day 1</span>
+                    <span class="text-sm text-gray-500">Day 7</span>
                 </div>
-                <div class="p-2">
-                    <div class="flex items-center justify-between px-3 py-2 bg-purple-500/10 rounded border border-purple-500/20 mb-1">
-                        <div class="flex items-center gap-3">
-                            <div class="w-5 h-5 rounded-full bg-white flex items-center justify-center text-black font-bold text-xs">C</div>
-                            <span class="text-white text-sm">Cursor</span>
+                <div class="relative h-2 bg-white/5 rounded-full mb-12">
+                    <div class="absolute inset-y-0 left-0 w-[60%] bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full"></div>
+                    <div class="absolute top-1/2 -translate-y-1/2 left-[60%] w-4 h-4 bg-primary-500 rounded-full shadow-[0_0_15px_rgba(var(--primary-500),0.5)]"></div>
+                </div>
+                
+                <div class="grid grid-cols-7 gap-2">
+                    <div class="text-center">
+                        <div class="w-full aspect-square bg-primary-500/20 border border-primary-500/30 rounded-lg mb-2 flex items-center justify-center">
+                            <svg viewBox="0 0 24 24" class="w-6 h-6 fill-primary-400"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                         </div>
-                        <span class="text-xs text-purple-400 bg-purple-500/10 px-1.5 py-0.5 rounded border border-purple-500/20">Agent</span>
+                        <span class="text-xs text-gray-400">Discovery</span>
                     </div>
-                     <div class="flex items-center justify-between px-3 py-2 hover:bg-white/5 rounded cursor-pointer">
-                        <div class="flex items-center gap-3">
-                            <div class="w-5 h-5 rounded-full bg-white flex items-center justify-center text-black font-bold text-xs">G</div>
-                            <span class="text-gray-300 text-sm">GitHub Copilot</span>
+                    <div class="text-center">
+                        <div class="w-full aspect-square bg-primary-500/20 border border-primary-500/30 rounded-lg mb-2 flex items-center justify-center">
+                            <svg viewBox="0 0 24 24" class="w-6 h-6 fill-primary-400"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                         </div>
-                        <span class="text-xs text-gray-500 bg-white/5 px-1.5 py-0.5 rounded">Agent</span>
+                        <span class="text-xs text-gray-400">Design</span>
                     </div>
-                     <div class="flex items-center justify-between px-3 py-2 hover:bg-white/5 rounded cursor-pointer">
-                        <div class="flex items-center gap-3">
-                            <div class="w-5 h-5 rounded-full bg-red-500 flex items-center justify-center text-white font-bold text-xs">S</div>
-                            <span class="text-gray-300 text-sm">Sentry</span>
+                    <div class="text-center">
+                        <div class="w-full aspect-square bg-primary-500/20 border border-primary-500/30 rounded-lg mb-2 flex items-center justify-center">
+                            <svg viewBox="0 0 24 24" class="w-6 h-6 fill-primary-400"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                         </div>
-                        <span class="text-xs text-gray-500 bg-white/5 px-1.5 py-0.5 rounded">Agent</span>
+                        <span class="text-xs text-gray-400">Build</span>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-full aspect-square bg-primary-500/10 border border-primary-500/20 rounded-lg mb-2 flex items-center justify-center animate-pulse">
+                            <div class="w-2 h-2 bg-primary-500 rounded-full"></div>
+                        </div>
+                        <span class="text-xs text-primary-400">Test</span>
+                    </div>
+                    <div class="text-center opacity-50">
+                        <div class="w-full aspect-square bg-white/5 border border-white/10 rounded-lg mb-2"></div>
+                        <span class="text-xs text-gray-500">Review</span>
+                    </div>
+                    <div class="text-center opacity-50">
+                        <div class="w-full aspect-square bg-white/5 border border-white/10 rounded-lg mb-2"></div>
+                        <span class="text-xs text-gray-500">Polish</span>
+                    </div>
+                    <div class="text-center opacity-50">
+                        <div class="w-full aspect-square bg-white/5 border border-white/10 rounded-lg mb-2"></div>
+                        <span class="text-xs text-gray-500">Deploy</span>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Glow effect -->
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-purple-500/10 blur-[100px] pointer-events-none"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-primary-500/10 blur-[100px] pointer-events-none"></div>
     </div>
 
     <!-- Two Columns -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
         <!-- Column 1 -->
         <div>
-            <h3 class="text-2xl font-medium mb-3">Self-driving product operations</h3>
-            <p class="text-gray-400 mb-8">Streamline your product development workflows with AI assistance for routine, manual tasks.</p>
+            <h3 class="text-2xl font-medium mb-3">Live progress tracking</h3>
+            <p class="text-gray-400 mb-8">Monitor your MVP development in real-time with transparent dashboards showing exactly where your project stands.</p>
             
             <div class="bg-[#0e1012] border border-white/10 rounded-xl p-6 h-[300px] relative overflow-hidden group">
-                <!-- Triage Intelligence Mockup -->
+                <!-- Progress Dashboard Mockup -->
                 <div class="space-y-3">
                     <div class="flex items-center gap-2 text-xs text-gray-500 uppercase tracking-wider mb-2">
-                        <span class="w-2 h-2 rounded-full bg-purple-500"></span> Triage Intelligence
+                        <span class="w-2 h-2 rounded-full bg-primary-500"></span> Project Status
                     </div>
                     <div class="p-3 bg-white/5 rounded border border-white/5 text-sm">
-                        <div class="flex items-center gap-2 mb-2">
-                            <span class="text-gray-400">Suggestions:</span>
-                            <span class="px-1.5 py-0.5 bg-white/10 rounded text-xs text-white">nan</span>
-                            <span class="px-1.5 py-0.5 bg-white/10 rounded text-xs text-white">Mobile App Refactor</span>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-gray-400">Overall Progress</span>
+                            <span class="text-primary-400 font-medium">65%</span>
                         </div>
-                        <div class="p-3 bg-[#1a1c1e] rounded border border-white/5 mt-2">
-                            <div class="text-xs text-gray-400 mb-1">Why this assignee was suggested</div>
-                            <div class="text-xs text-gray-500 leading-relaxed">
-                                This person was the assignee on previous issues related to performance problems in the mobile app launch flow.
+                        <div class="w-full h-2 bg-white/5 rounded-full mb-4">
+                            <div class="h-full w-[65%] bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full"></div>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between text-xs">
+                                <span class="text-gray-500">✓ Authentication</span>
+                                <span class="text-primary-400">Complete</span>
                             </div>
-                            <div class="mt-2 flex gap-2">
-                                <button class="px-2 py-1 bg-white/10 rounded text-xs text-white hover:bg-white/20">Accept suggestion</button>
+                            <div class="flex items-center justify-between text-xs">
+                                <span class="text-gray-500">⟳ Dashboard UI</span>
+                                <span class="text-secondary-400">In Progress</span>
+                            </div>
+                            <div class="flex items-center justify-between text-xs">
+                                <span class="text-gray-500">○ API Integration</span>
+                                <span class="text-gray-600">Pending</span>
                             </div>
                         </div>
                     </div>
@@ -91,28 +118,37 @@
 
         <!-- Column 2 -->
         <div>
-            <h3 class="text-2xl font-medium mb-3">Linear MCP</h3>
-            <p class="text-gray-400 mb-8">Connect Linear to your favorite tools including Cursor, Claude, ChatGPT, and more.</p>
+            <h3 class="text-2xl font-medium mb-3">Direct founder collaboration</h3>
+            <p class="text-gray-400 mb-8">Stay in the loop with daily updates, quick feedback cycles, and direct access to your development team.</p>
             
             <div class="bg-[#0e1012] border border-white/10 rounded-xl p-6 h-[300px] relative overflow-hidden flex flex-col justify-center">
-                <!-- Code/Terminal Mockup -->
-                <div class="bg-[#0b0d0e] rounded-lg border border-white/10 p-4 font-mono text-xs text-gray-400 shadow-2xl">
-                    <div class="mb-2 text-green-400">// mcp.linear.app/sse</div>
-                    <div class="pl-4 border-l border-white/10 mb-4">
-                        <span class="text-purple-400">"mcpServers"</span>: &#123;<br/>
-                        &nbsp;&nbsp;<span class="text-blue-400">"linear"</span>: &#123;<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-blue-400">"command"</span>: <span class="text-orange-400">"npx"</span><br/>
-                        &nbsp;&nbsp;&#125;<br/>
-                        &#125;
+                <!-- Communication Mockup -->
+                <div class="space-y-3">
+                    <div class="bg-[#1a1c1e] rounded-lg border border-white/10 p-3 text-sm">
+                        <div class="flex items-center gap-2 mb-2">
+                            <div class="w-6 h-6 rounded-full bg-primary-500 flex items-center justify-center text-white text-xs font-bold">E</div>
+                            <span class="text-white font-medium">Envel Team</span>
+                            <span class="text-gray-500 text-xs ml-auto">2 hours ago</span>
+                        </div>
+                        <p class="text-gray-400 text-xs">Authentication flow is complete and deployed to staging. Ready for your review.</p>
                     </div>
-                    <div class="flex items-center gap-2 bg-white/5 p-2 rounded border border-white/5">
-                        <div class="w-1.5 h-4 bg-white animate-pulse"></div>
-                        <span>Ask anything</span>
+                    
+                    <div class="bg-[#0b0d0e] rounded-lg border border-white/10 p-3 text-sm">
+                        <div class="flex items-center gap-2 mb-2">
+                            <div class="w-6 h-6 rounded-full bg-gray-600 flex items-center justify-center text-white text-xs font-bold">F</div>
+                            <span class="text-white font-medium">Founder</span>
+                            <span class="text-gray-500 text-xs ml-auto">1 hour ago</span>
+                        </div>
+                        <p class="text-gray-400 text-xs">Looks great! Can we adjust the button colors?</p>
                     </div>
-                    <div class="flex gap-2 mt-2">
-                         <span class="px-2 py-1 bg-white/5 rounded text-[10px] border border-white/5">Attach</span>
-                         <span class="px-2 py-1 bg-white/5 rounded text-[10px] border border-white/5">Search</span>
-                         <span class="px-2 py-1 bg-white/5 rounded text-[10px] border border-white/5">Reason</span>
+                    
+                    <div class="bg-[#1a1c1e] rounded-lg border border-white/10 p-3 text-sm">
+                        <div class="flex items-center gap-2 mb-2">
+                            <div class="w-6 h-6 rounded-full bg-primary-500 flex items-center justify-center text-white text-xs font-bold">E</div>
+                            <span class="text-white font-medium">Envel Team</span>
+                            <span class="text-gray-500 text-xs ml-auto">30 min ago</span>
+                        </div>
+                        <p class="text-gray-400 text-xs">Done! Updated and live on staging now.</p>
                     </div>
                 </div>
             </div>

@@ -2,8 +2,8 @@
   <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
     <!-- Cycles Card -->
     <div>
-      <h3 class="text-2xl font-medium mb-3">Build momentum with Cycles</h3>
-      <p class="text-gray-400 mb-8">Create healthy routines and focus your team on what work should happen next.</p>
+      <h3 class="text-2xl font-medium mb-3">7-day sprint velocity</h3>
+      <p class="text-gray-400 mb-8">Track development velocity and feature completion across your entire project timeline.</p>
       
       <div class="bg-[#0e1012] border border-white/10 rounded-xl p-6 h-[350px] relative overflow-hidden flex flex-col">
         <div class="flex items-center justify-between mb-6">
